@@ -4,7 +4,6 @@ pipeline {
         stage('build') {
             steps {
                 sh './mvnw clean'
-                sh './mvnm compile'
                 sh './mvnm install'
             }
         }
