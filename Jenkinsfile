@@ -14,7 +14,7 @@ pipeline {
         }
         stage('publish'){
             steps{
-                archiveArtifacts artifacts : sh './mvnw deploy'
+                sh './mvnw deploy'
             }
         }
     }
