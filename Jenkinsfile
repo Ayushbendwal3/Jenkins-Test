@@ -4,12 +4,12 @@ pipeline {
         stage('build') {
             steps {
                 sh './mvnw clean'
-                sh './mvnm install'
+                sh './mvnw install'
             }
         }
         stage('test') {
             steps {
-                sh './mvnm test'
+                sh './mvnw test'
             }
         }
     }
