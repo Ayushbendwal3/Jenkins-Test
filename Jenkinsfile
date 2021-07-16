@@ -12,5 +12,10 @@ pipeline {
                 sh './mvnw test'
             }
         }
+        stage('publish'){
+            steps{
+                archieveArtifacts artifacts : sh './mvnw deploy'
+            }
+        }
     }
 }
